@@ -1,19 +1,9 @@
-import React, { Component } from "react";
 import { connect } from "react-redux";
 import { compose, withHandlers, lifecycle, setPropTypes } from "recompose";
 
 import Homepage from "./homepage.component";
 import { fetchUsersAction } from "../../actions/user-actions";
 
-// class HomepageContainer extends Component {
-//     render() {
-//         return(
-//             <Homepage />
-//         );
-//     }
-// }
-
-// HomepageContainer.propTypes = {};
 
 const mapStateToProps = (state) => {
     return {
@@ -22,20 +12,20 @@ const mapStateToProps = (state) => {
     }
 };
 
-const handlers = withHandlers({
-    fetchUsers: ({ dispatch }) => () => dispatch(fetchUsersAction()),
-});
+// const handlers = withHandlers({
+//     fetchUsers: ({ dispatch }) => () => dispatch(fetchUsersAction()),
+// });
   
-const lifecycles = lifecycle({
-    componentDidMount() {
-        this.props.fetchUsers();
-    }
-});
+// const lifecycles = lifecycle({
+//     componentDidMount() {
+//         this.props.fetchUsers();
+//     }
+// });
 
 export default compose(
     connect(mapStateToProps),
-    handlers,
-    lifecycles,
+    // handlers,
+    // lifecycles,
     // setPropTypes(propTypes)
 )(Homepage);
   
