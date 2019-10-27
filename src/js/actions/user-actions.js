@@ -33,7 +33,7 @@ export const USER_AUTHENTICATE_SUCCESS = "USER_AUTHENTICATE_SUCCESS";
 export const userAuthenticateSuccessAction = data => {
     return {
         type: USER_AUTHENTICATE_SUCCESS,
-        data: data
+        payload: data
     }
 };
 
@@ -41,6 +41,6 @@ export const USER_AUTHENTICATE_FAIL = "USER_AUTHENTICATE_FAIL";
 export const userAuthenticateFailAction = errors => {
     return {
         type: USER_AUTHENTICATE_FAIL,
-        data: errors
+        payload: errors
     }
 };

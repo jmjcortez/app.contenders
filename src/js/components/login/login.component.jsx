@@ -3,10 +3,11 @@ import { Field, reduxForm } from "redux-form";
 
 
 const Login = props => {
-    const { handleSubmit, pristine, submitting, reset } = props
+    const { handleSubmit, pristine, submitting, reset, token } = props
 
     return (
         <form onSubmit={handleSubmit}>
+            { token }
             <div>
                 <label>Email</label>
             </div>
