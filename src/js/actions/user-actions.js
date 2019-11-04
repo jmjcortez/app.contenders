@@ -38,9 +38,11 @@ export const userAuthenticateSuccessAction = data => {
 };
 
 export const USER_AUTHENTICATE_FAIL = "USER_AUTHENTICATE_FAIL";
-export const userAuthenticateFailAction = errors => {
+export const userAuthenticateFailAction = error => {
     return {
         type: USER_AUTHENTICATE_FAIL,
-        payload: errors
+        payload: {
+            error: error,
+        }
     }
 };

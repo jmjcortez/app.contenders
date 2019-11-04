@@ -1,9 +1,13 @@
 import React from "react";
 import { Field, reduxForm } from "redux-form";
-
+import { Redirect } from 'react-router-dom';
 
 const Login = props => {
     const { handleSubmit, pristine, submitting, reset, token } = props
+
+    if (window.localStorage.getItem("JWT")) {
+        return <Redirect to={{pathname: "/homepage"}} />
+    };
 
     return (
         <form onSubmit={handleSubmit}>

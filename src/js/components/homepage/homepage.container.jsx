@@ -8,7 +8,6 @@ import { fetchUsersAction } from "../../actions/user-actions";
 const mapStateToProps = (state) => {
     return {
         userList: state.user.userList,
-        aklas: state.user.aklas,
     }
 };
 

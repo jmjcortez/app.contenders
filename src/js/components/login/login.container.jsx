@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import { compose, withHandlers } from "recompose";
+import { compose } from "recompose";
 
 import Login from "./login.component";
 import { handleAuthenticate } from "./handlers";
