@@ -1,9 +1,7 @@
 import { connect } from "react-redux";
 import { compose, withHandlers, lifecycle, setPropTypes } from "recompose";
 
-import Homepage from "./homepage.component";
-import { fetchUsersAction } from "../../actions/user-actions";
-
+import LandingPage from "./landing-page.component";
 
 const mapStateToProps = (state) => {
     return {
@@ -26,5 +24,5 @@ export default compose(
     // handlers,
     // lifecycles,
     // setPropTypes(propTypes)
-)(Homepage);
+)(LandingPage);
   
