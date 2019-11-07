@@ -66,7 +66,7 @@ class Hero extends Component {
                 <Underline />
                 <Subtitle>Punch, kick, grapple whatever you wanna do you can do here. Meet awesome people and be the best version of yourself</Subtitle>
                 <RegisterContainer>
-                    <RegisterButton size='lg'>Register</RegisterButton>
+                    <RegisterButton size='lg' href='register'>Register</RegisterButton>
                     <Text>Discover the experience</Text>
                 </RegisterContainer>
             </StyledContainer>

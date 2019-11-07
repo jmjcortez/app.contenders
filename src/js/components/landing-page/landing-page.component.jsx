@@ -8,6 +8,9 @@ import Hero from './hero';
 
 const StyledNavBar = styled(Navbar)`
   background-color: ${props => props.theme.colors.primary};
+  position: fixed;
+  top: 0%;
+  transform: translate(0%, 0);
 `;
 
 const StyledBrand = styled(Navbar.Brand)`
@@ -21,16 +24,8 @@ const StyledBrand = styled(Navbar.Brand)`
   text-transform: uppercase;
 `;
 
-const LoginLink = styled(Navbar.Brand)`
-  color: ${props => props.theme.colors.white} !important;
-  font-family: 'Roboto Condensed', sans-serif;
-  font-weight: 700;
-  line-height: 1.6;
-`;
-
-const RegisterLink = styled(Navbar.Brand)`
-  color: #fd4d2e !important;
-  font-size: 100px;
+const Links = styled(Navbar.Brand)`
+  color: ${props => props.login ? props.theme.colors.white : props.theme.colors.light} !important;
   font-family: 'Roboto Condensed', sans-serif;
   font-weight: 700;
   line-height: 1.6;
@@ -39,16 +34,16 @@ const RegisterLink = styled(Navbar.Brand)`
 class LandingPage extends Component {
     render() {
         return (
-          <ThemeProvider theme={defaultTheme}>
+          <div>
             <StyledNavBar>
               <StyledBrand className='mx-auto'>CONTENDERS</StyledBrand>
               <Nav>
-                <LoginLink href="login">Login</LoginLink>
-                <RegisterLink href="register">Register</RegisterLink>
+                <Links href="login" login>Login</Links>
+                <Links href="register">Register</Links>
               </Nav>
             </StyledNavBar>
-            <Hero />
-          </ThemeProvider>
+            <Hero/>
+          </div>
         );
       }
 }
