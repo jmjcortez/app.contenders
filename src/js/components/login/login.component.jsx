@@ -46,7 +46,6 @@ const Subtitle = styled.div`
     margin-top: 14px;
 `;
 
-
 const Link = styled.a`
     color: ${props => props.theme.colors.black} !important;
     text-decoration: underline;
