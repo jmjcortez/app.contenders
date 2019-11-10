@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Field input test should render correctly with no props 1`] = `
+<FormControl
+  value="test"
+/>
+`;
+
+exports[`Field input test should render correctly with no props with input prop 1`] = `
+<FormControl
+  value="test"
+/>
+`;

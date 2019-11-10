@@ -13,7 +13,7 @@ const StyledContainer = styled.div`
 
 const StyledTitle = styled.h1`
     font-size: 48px;
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: ${props => props.theme.fonts.roboto.fontFamily};
     font-weight: 700;
     line-height: 1;
     text-transform: uppercase;

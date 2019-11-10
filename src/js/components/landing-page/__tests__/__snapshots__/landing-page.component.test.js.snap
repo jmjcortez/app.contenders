@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Field input test should render correctly with no props 1`] = `
+<div>
+  <Styled(Navbar)>
+    <Styled(NavbarBrand)
+      className="mx-auto"
+    >
+      CONTENDERS
+    </Styled(NavbarBrand)>
+    <Nav
+      fill={false}
+      justify={false}
+    >
+      <Styled(NavbarBrand)
+        href="login"
+        login={true}
+      >
+        Login
+      </Styled(NavbarBrand)>
+      <Styled(NavbarBrand)
+        href="register"
+      >
+        Register
+      </Styled(NavbarBrand)>
+    </Nav>
+  </Styled(Navbar)>
+  <Hero />
+</div>
+`;
+
+exports[`Landing page test should render correctly with no props 1`] = `
+<div>
+  <Styled(Navbar)>
+    <Styled(NavbarBrand)
+      className="mx-auto"
+    >
+      CONTENDERS
+    </Styled(NavbarBrand)>
+    <Nav
+      fill={false}
+      justify={false}
+    >
+      <Styled(NavbarBrand)
+        href="login"
+        login={true}
+      >
+        Login
+      </Styled(NavbarBrand)>
+      <Styled(NavbarBrand)
+        href="register"
+      >
+        Register
+      </Styled(NavbarBrand)>
+    </Nav>
+  </Styled(Navbar)>
+  <Hero />
+</div>
+`;

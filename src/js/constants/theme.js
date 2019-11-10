@@ -5,5 +5,13 @@ export const defaultTheme = {
         light: '#e84118',
         pink: '#ffE5df',
         black: '#000',
+    },
+    fonts: {
+        workSans: {
+            fontFamily: '\'Work Sans\', sans-serif'
+        },
+        roboto: {
+            fontFamily: '\'Roboto Condensed\', sans-serif'
+        }
     }
 };

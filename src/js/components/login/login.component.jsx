@@ -4,6 +4,8 @@ import { Redirect } from 'react-router-dom';
 import { Form, Button } from 'react-bootstrap';
 import styled from 'styled-components';
 
+import { FieldInput } from '../form-fields';
+
 const Container = styled.div`
     margin-top: 25px;
 `;
@@ -35,7 +37,7 @@ const Underline = styled.span`
 
 const Subtitle = styled.div`
     font-size: 14px;
-    font-family: 'Work Sans', sans-serif;
+    font-family: ${props => props.theme.fonts.roboto.fontFamily};
     font-weight: 300;
     line-height: 1.33;
     text-align: center;
@@ -44,62 +46,45 @@ const Subtitle = styled.div`
     margin-top: 14px;
 `;
 
-/*
-const Login = props => {
-    const { handleSubmit, pristine, submitting, reset, token } = props
 
+const Link = styled.a`
+    color: ${props => props.theme.colors.black} !important;
+    text-decoration: underline;
+`;
+
+const FormLabel = styled(Form.Label)`
+    font-family: ${props => props.theme.fonts.roboto.fontFamily};
+`;
+
+const StyledButton = styled(Button)`
+    margin-top: 30px;
+    background-color: ${props => props.theme.colors.light} !important;
+    border-color: ${props => props.theme.colors.light} !important;
+`;
+
+export const Login = props => {
+    const { handleSubmit } = props
+    
     if (window.localStorage.getItem("JWT")) {
         return <Redirect to={{pathname: "/homepage"}} />
     };
 
     return (
         <Container>
-            <form onSubmit={handleSubmit}>
-                { token }
-                <div>
-                    <label>Email</label>
-                </div>
-                <div>
-                <Field
-                    name="email"
-                    component="input"
-                    type="email"
-                    placeholder="Email"
-                />
-                </div>
-                <div>
-                    <label>Password</label>
-                </div>
-                <div>
-                    <Field 
-                        name="password" 
-                        type="password" 
-                        component="input" 
-                        label="Password"
-                    />
-                </div>
-                <button type="submit" disabled={pristine || submitting}>
-                    Submit
-                </button>
-                <button type="button" disabled={pristine || submitting} onClick={reset}>
-                    Clear Values
-                </button>
-            </form>
-        </Container>
-    )
-} */
-
-const Login = props => {
-    return (
-        <Container>
             <FormWrapper>
                 <StyledTitle>LOG IN</StyledTitle>
                 <Underline />
-                <Subtitle>Not a member yet? Sign Up here</Subtitle>
-                <Form>
+                <Subtitle>
+                    Not a member yet? <Link href='register'>Sign Up here</Link>
+                </Subtitle>
+                <Form onSubmit={handleSubmit}>
                     <Form.Group controlId="formBasicEmail">
-                        <Form.Label>Email</Form.Label>  
-                        <Form.Control type="email" />
+                        <FormLabel>Email</FormLabel>  
+                        <Field 
+                            name='email'
+                            type='email' 
+                            component={FieldInput}
+                        />
                         <Form.Text className="text-muted">
                         Required
                         </Form.Text>
@@ -107,14 +92,18 @@ const Login = props => {
 
                     <Form.Group controlId="formBasicPassword">
                         <Form.Label>Password</Form.Label>
-                        <Form.Control type="password"/>
+                        <Field 
+                            name='password'
+                            type='password' 
+                            component={FieldInput}
+                        />
                     </Form.Group>
                         <Form.Text className="text-muted">
                             Required
                         </Form.Text>
-                    <Button variant="primary" type="submit">
+                    <StyledButton variant="primary" type="submit" block>
                         Submit
-                    </Button>
+                    </StyledButton>
                 </Form>
             </FormWrapper>
         </Container>
