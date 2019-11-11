@@ -1,8 +1,7 @@
 import userReducer, { initialState } from '../user-reducers';
 import { 
-    USER_AUTHENTICATE, 
-    USER_AUTHENTICATE_FAIL, 
-    USER_AUTHENTICATE_SUCCESS 
+    USER_AUTHENTICATE, USER_AUTHENTICATE_FAIL, USER_AUTHENTICATE_SUCCESS,
+    USER_REGISTER, USER_REGISTER_FAIL, USER_REGISTER_SUCCESS, 
 } from '../../actions/user-actions';
 
 describe('Authenticate reducer', () => {
@@ -79,5 +78,65 @@ describe('Authenticate reducer', () => {
         });
         expect(window.localStorage.getItem("JWT")).toEqual(null);
         expect(window.localStorage.getItem("REFRESH_JWT")).toEqual(null);
+    });
+});
+
+describe('Register reducer', () => {
+    it('should return initial state', () => {
+       const action = {
+           type: undefined
+       }
+        expect(
+            userReducer(initialState, action)
+        ).toEqual(initialState);
+    });
+
+    it('should handle user authenticate', () => {
+        const action = {
+            type: USER_AUTHENTICATE,
+        }
+
+        expect(
+            userReducer(initialState, action)
+        ).toEqual({
+            ...initialState,
+            isLoading: true,
+        });
+    });
+
+    it('should handle user authenticate success', () => {
+
+        const action = {
+            type: USER_REGISTER_SUCCESS,
+        };
+
+        expect(
+            userReducer(initialState, action)
+        ).toEqual({
+            ...initialState,
+            isLoading: false,
+            error: {},
+        });
+    });
+
+    it('should handle user authenticate fail', () => {
+        const error = {
+            message: 'test error'
+        };
+
+        const action = {
+            type: USER_REGISTER_FAIL,
+            payload: {
+                error: error
+            },
+        };
+
+        expect(
+            userReducer(initialState, action)
+        ).toEqual({
+            ...initialState,
+            isLoading: false,
+            error: error,
+        });
     });
 });

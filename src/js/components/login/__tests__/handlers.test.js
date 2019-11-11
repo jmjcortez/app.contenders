@@ -11,7 +11,7 @@ import { API } from '../../../constants/apis';
 
 describe('Authenticate test', () => {
 
-    fit('should dispatch user authenticate success on success', async () => {
+    it('should dispatch user authenticate success on success', async () => {
         const mock = new MockAdapter(axios);
         mock.onPost(`${API}/auth/token/`).reply(200, {
             data: {

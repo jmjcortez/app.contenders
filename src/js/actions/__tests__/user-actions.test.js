@@ -51,36 +51,36 @@ describe('Authenticate actions', () => {
     });
 });
 
-// describe('Register actions', () => {
-//     it('should create a user register action', () => {
-//         const expectedAction = {
-//             type: USER_REGISTER
-//         };
+describe('Register actions', () => {
+    it('should create a user register action', () => {
+        const expectedAction = {
+            type: USER_REGISTER
+        };
 
-//         expect(userRegisterAction()).toEqual(expectedAction)
-//     });
+        expect(userRegisterAction()).toEqual(expectedAction)
+    });
 
-//     it('should create a user register success action', () => {
+    it('should create a user register success action', () => {
 
-//         const expectedAction = {
-//             type: USER_REGISTER_SUCCESS,
-//         }
+        const expectedAction = {
+            type: USER_REGISTER_SUCCESS,
+        }
 
-//         expect(userRegisterSuccessAction()).toEqual(expectedAction);
-//     });
+        expect(userRegisterSuccessAction()).toEqual(expectedAction);
+    });
 
-//     it('should create a user register fail action', () => {
-//         const payload = {
-//             test: 'test'
-//         }
+    it('should create a user register fail action', () => {
+        const payload = {
+            test: 'test'
+        }
 
-//         const expectedAction = {
-//             type: USER_REGISTER_FAIL,
-//             payload: {
-//                 error: payload
-//             },
-//         }
+        const expectedAction = {
+            type: USER_REGISTER_FAIL,
+            payload: {
+                error: payload
+            },
+        }
 
-//         expect(userRegisterFailAction(payload)).toEqual(expectedAction);
-//     });
-// });
+        expect(userRegisterFailAction(payload)).toEqual(expectedAction);
+    });
+});
