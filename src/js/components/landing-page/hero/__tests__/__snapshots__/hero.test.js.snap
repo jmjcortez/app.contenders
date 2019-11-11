@@ -1,28 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Field input test should render correctly with no props 1`] = `
-<styled.div>
-  <styled.h1>
-    Be the best
-  </styled.h1>
-  <styled.span />
-  <styled.div>
-    Punch, kick, grapple whatever you wanna do you can do here. Meet awesome people and be the best version of yourself
-  </styled.div>
-  <styled.div>
-    <Styled(Button)
-      href="register"
-      size="lg"
-    >
-      Register
-    </Styled(Button)>
-    <styled.p>
-      Discover the experience
-    </styled.p>
-  </styled.div>
-</styled.div>
-`;
-
 exports[`Hero test should render correctly with no props 1`] = `
 <styled.div>
   <styled.h1>

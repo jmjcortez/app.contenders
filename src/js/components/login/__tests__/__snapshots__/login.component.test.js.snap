@@ -1,67 +1,68 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Field input test should render correctly with no props with input prop 1`] = `
-<Hoc
-  destroyOnUnmount={true}
-  enableReinitialize={false}
-  forceUnregisterOnUnmount={false}
-  form="login"
-  forwardedRef={null}
-  getFormState={[Function]}
-  keepDirtyOnReinitialize={false}
-  persistentSubmitErrors={false}
-  pure={true}
-  shouldAsyncValidate={[Function]}
-  shouldError={[Function]}
-  shouldValidate={[Function]}
-  shouldWarn={[Function]}
-  submitAsSideEffect={false}
-  touchOnBlur={true}
-  touchOnChange={false}
-  updateUnregisteredFields={false}
-/>
-`;
-
 exports[`Login component test should render correctly with no props 1`] = `
-<Hoc
-  destroyOnUnmount={true}
-  enableReinitialize={false}
-  forceUnregisterOnUnmount={false}
-  form="login"
-  forwardedRef={null}
-  getFormState={[Function]}
-  keepDirtyOnReinitialize={false}
-  persistentSubmitErrors={false}
-  pure={true}
-  shouldAsyncValidate={[Function]}
-  shouldError={[Function]}
-  shouldValidate={[Function]}
-  shouldWarn={[Function]}
-  submitAsSideEffect={false}
-  touchOnBlur={true}
-  touchOnChange={false}
-  updateUnregisteredFields={false}
-/>
-`;
-
-exports[`Login component test should render correctly with no props with input prop 1`] = `
-<Hoc
-  destroyOnUnmount={true}
-  enableReinitialize={false}
-  forceUnregisterOnUnmount={false}
-  form="login"
-  forwardedRef={null}
-  getFormState={[Function]}
-  keepDirtyOnReinitialize={false}
-  persistentSubmitErrors={false}
-  pure={true}
-  shouldAsyncValidate={[Function]}
-  shouldError={[Function]}
-  shouldValidate={[Function]}
-  shouldWarn={[Function]}
-  submitAsSideEffect={false}
-  touchOnBlur={true}
-  touchOnChange={false}
-  updateUnregisteredFields={false}
-/>
+<styled.div>
+  <styled.div>
+    <styled.h1>
+      LOG IN
+    </styled.h1>
+    <styled.span />
+    <styled.div>
+      Not a member yet? 
+      <styled.a
+        href="register"
+      >
+        Sign Up here
+      </styled.a>
+    </styled.div>
+    <Form
+      inline={false}
+    >
+      <FormGroup
+        controlId="formBasicEmail"
+      >
+        <Styled(FormLabel)>
+          Email
+        </Styled(FormLabel)>
+        <Field
+          component={[Function]}
+          name="email"
+          type="email"
+        />
+        <FormText
+          className="text-muted"
+        >
+          Required
+        </FormText>
+      </FormGroup>
+      <FormGroup
+        controlId="formBasicPassword"
+      >
+        <FormLabel
+          column={false}
+          srOnly={false}
+        >
+          Password
+        </FormLabel>
+        <Field
+          component={[Function]}
+          name="password"
+          type="password"
+        />
+      </FormGroup>
+      <FormText
+        className="text-muted"
+      >
+        Required
+      </FormText>
+      <Styled(Button)
+        block={true}
+        type="submit"
+        variant="primary"
+      >
+        Submit
+      </Styled(Button)>
+    </Form>
+  </styled.div>
+</styled.div>
 `;

@@ -6,7 +6,7 @@ import {
     userAuthenticateFailAction,
 } from '../../actions/user-actions';
 
-export const API = 'http://localhost:8000';
+import { API } from '../../constants/apis';
 
 export const handleAuthenticate = async (values, dispatch) => {
     dispatch(userAuthenticateAction());

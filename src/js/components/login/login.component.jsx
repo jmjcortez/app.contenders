@@ -76,6 +76,7 @@ export const Login = props => {
                 <Subtitle>
                     Not a member yet? <Link href='register'>Sign Up here</Link>
                 </Subtitle>
+                {/* ADD VALIDATOR */}
                 <Form onSubmit={handleSubmit}>
                     <Form.Group controlId="formBasicEmail">
                         <FormLabel>Email</FormLabel>  

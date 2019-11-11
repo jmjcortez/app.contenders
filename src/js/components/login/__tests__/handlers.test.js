@@ -1,16 +1,17 @@
 import axios from 'axios';
 import MockAdapter from 'axios-mock-adapter';
 
-import { handleAuthenticate, API } from '../handlers';
+import { handleAuthenticate } from '../handlers';
 import { 
     USER_AUTHENTICATE, 
     USER_AUTHENTICATE_SUCCESS, 
     USER_AUTHENTICATE_FAIL 
 } from '../../../actions/user-actions';
+import { API } from '../../../constants/apis';
 
 describe('Authenticate test', () => {
 
-    it('should dispatch user authenticate success on success', async () => {
+    fit('should dispatch user authenticate success on success', async () => {
         const mock = new MockAdapter(axios);
         mock.onPost(`${API}/auth/token/`).reply(200, {
             data: {

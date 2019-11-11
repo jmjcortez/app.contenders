@@ -71,6 +71,7 @@ export const Register = props => {
         <Subtitle>
           Already a member? <Link href='login'>Log in here</Link>
         </Subtitle>
+        {/* ADD VALIDATOR */}
         <Form onSubmit={() => {}}>
           <Form.Row controlId="formBasicName">
             <Col>
