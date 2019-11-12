@@ -63,6 +63,8 @@ const StyledButton = styled(Button)`
 `;
 
 export const Register = props => {
+  const { handleSubmit } = props;
+
   return (
     <Container>
       <FormWrapper>
@@ -72,7 +74,7 @@ export const Register = props => {
           Already a member? <Link href='login'>Log in here</Link>
         </Subtitle>
         {/* ADD VALIDATOR */}
-        <Form onSubmit={() => {}}>
+        <Form onSubmit={handleSubmit}>
           <Form.Row controlId="formBasicName">
             <Col>
               <FormLabel>First name</FormLabel>  

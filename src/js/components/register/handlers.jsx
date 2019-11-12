@@ -12,7 +12,7 @@ export const handleRegister = async (values, dispatch) => {
   dispatch(userRegisterAction());
 
   try {
-    await axios.post(`${API}/api/register`, values);
+    await axios.post(`${API}/api/register/`, values);
 
     dispatch(userRegisterSuccessAction());
   

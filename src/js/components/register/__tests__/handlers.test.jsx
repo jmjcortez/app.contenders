@@ -12,7 +12,7 @@ import { API } from '../../../constants/apis';
 describe('Register test', () => {
   it('should dispatch user register action on register success', async () => {
     const mock = new MockAdapter(axios);
-    mock.onPost(`${API}/api/register`).reply(201);
+    mock.onPost(`${API}/api/register/`).reply(201);
 
     const dispatch = jest.fn();
 

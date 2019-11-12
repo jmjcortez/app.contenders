@@ -62,7 +62,7 @@ const StyledButton = styled(Button)`
 `;
 
 export const Login = props => {
-    const { handleSubmit } = props
+    const { handleSubmit } = props;
     
     if (window.localStorage.getItem("JWT")) {
         return <Redirect to={{pathname: "/homepage"}} />
