@@ -1,7 +1,8 @@
 import axios from 'axios';
 import MockAdapter from 'axios-mock-adapter';
 
-import { handleAuthenticate, API } from '../handlers';
+import { handleAuthenticate } from '../handlers';
+import { API } from '../../../constants/apis';
 import { 
     USER_AUTHENTICATE, 
     USER_AUTHENTICATE_SUCCESS, 
