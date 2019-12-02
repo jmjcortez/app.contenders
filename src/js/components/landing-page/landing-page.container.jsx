@@ -1,7 +1,7 @@
-import { connect } from "react-redux";
-import { compose, withHandlers, lifecycle, setPropTypes } from "recompose";
+import { connect } from 'react-redux';
+import { compose, withHandlers, lifecycle, setPropTypes } from 'recompose';
 
-import LandingPage from "./landing-page.component";
+import LandingPage from './landing-page.component';
 
 const mapStateToProps = (state) => {
     return {

@@ -13,7 +13,7 @@ describe('Authenticate reducer', () => {
     it('should return initial state', () => {
        const action = {
            type: undefined
-       }
+       };
         expect(
             userReducer(initialState, action)
         ).toEqual(initialState);
