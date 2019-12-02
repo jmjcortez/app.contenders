@@ -3,6 +3,7 @@ import { Switch, Route, Redirect } from 'react-router-dom';
 
 import LandingPage from "../components/landing-page";
 import Login from "../components/login";
+import Homepage from '../components/homepage';
 
 const isTokenVerified = () => window.localStorage.getItem("JWT");
 
@@ -27,7 +28,7 @@ const Router = () => (
     <Switch>
         <Route exact path='/login' isTokenVerified={isTokenVerified} component={Login}/>
         <Route exact path='/' isTokenVerified={isTokenVerified} component={LandingPage}/>
-        {/* <PrivateRoute path="/homepage" isTokenVerified={isTokenVerified} component={LandingPage} /> */}
+        <PrivateRoute path="/homepage" isTokenVerified={isTokenVerified} component={Homepage} />
     </Switch>
 )
 

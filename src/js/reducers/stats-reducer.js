@@ -1,6 +1,5 @@
 import { 
   FETCH_STATS, FETCH_STATS_FAIL, FETCH_STATS_SUCCESS,
-  fetchStatsAction, fetchStatsFailAction, fetchStatsSuccessAction,
 } from "../actions/stats-actions";
 
 export const initialState = {
