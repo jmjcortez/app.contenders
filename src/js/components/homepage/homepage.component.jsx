@@ -15,9 +15,9 @@ export const Homepage = props => {
     <div>
       <h1>Stats</h1>
       <div>Contenders nearby: <span>{ contendersNearbyCount }</span></div>
-      <div>Contenders Fighting in your city: <span>{ contendersNearbyCount }</span></div>
-      <div>Contenders Fighting in your country: <span>{ contendersNearbyCount }</span></div>
-      <div>Global contenders count: <span>{ contendersNearbyCount }</span></div>
+      <div>Contenders Fighting in your city: <span>{ contendersFightingInCity }</span></div>
+      <div>Contenders Fighting in your country: <span>{ contendersFightingInCountry }</span></div>
+      <div>Global contenders count: <span>{ contendersGlobalCount }</span></div>
     </div>
   )
 };
