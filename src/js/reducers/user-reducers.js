@@ -1,8 +1,7 @@
 
 import { 
-    USER_AUTHENTICATE, 
-    USER_AUTHENTICATE_FAIL, 
-    USER_AUTHENTICATE_SUCCESS 
+    USER_AUTHENTICATE, USER_AUTHENTICATE_FAIL, USER_AUTHENTICATE_SUCCESS,
+    USER_REGISTER, USER_REGISTER_FAIL, USER_REGISTER_SUCCESS 
 } from "../actions/user-actions";
 
 export const initialState = {
@@ -35,6 +34,30 @@ const userReducer = (state=initialState, action) => {
         }
 
         case USER_AUTHENTICATE_FAIL: {
+            return {
+                ...state,
+                isLoading: false,
+                error: action.payload.error,
+            }            
+        }
+
+        case USER_REGISTER: {
+            return {
+                ...state,
+                isLoading: true,
+                error: {},
+            };
+        }
+
+        case USER_REGISTER_SUCCESS: {
+            return {
+                ...state,
+                isLoading: false,
+                error: {},
+            };
+        }
+
+        case USER_REGISTER_FAIL: {
             return {
                 ...state,
                 isLoading: false,

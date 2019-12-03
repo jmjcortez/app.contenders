@@ -1,14 +1,16 @@
 import React from 'react';
-
-import './App.css';
+import { ThemeProvider } from 'styled-components';
 
 import Router from './js/routers';
+import { defaultTheme } from './js/constants/theme';
 
 function App() {
   return (
-    <div className="App">
-      <Router />
-    </div>
+    <ThemeProvider theme={defaultTheme}>
+      <div className="App">
+        <Router />
+      </div>
+    </ThemeProvider>
   );
 }
 

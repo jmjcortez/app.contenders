@@ -9,20 +9,7 @@ const mapStateToProps = (state) => {
     }
 };
 
-// const handlers = withHandlers({
-//     fetchUsers: ({ dispatch }) => () => dispatch(fetchUsersAction()),
-// });
-  
-// const lifecycles = lifecycle({
-//     componentDidMount() {
-//         this.props.fetchUsers();
-//     }
-// });
-
 export default compose(
     connect(mapStateToProps),
-    // handlers,
-    // lifecycles,
-    // setPropTypes(propTypes)
 )(LandingPage);
   

@@ -2,12 +2,15 @@ import axios from 'axios';
 import MockAdapter from 'axios-mock-adapter';
 
 import { handleAuthenticate } from '../handlers';
+
 import { API } from '../../../constants/apis';
+
 import { 
     USER_AUTHENTICATE, 
     USER_AUTHENTICATE_SUCCESS, 
     USER_AUTHENTICATE_FAIL 
 } from '../../../actions/user-actions';
+import { API } from '../../../constants/apis';
 
 describe('Authenticate test', () => {
 
