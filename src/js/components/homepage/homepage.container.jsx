@@ -16,7 +16,7 @@ const mapStateToProps = (state) => {
 };
 
 const handlers = withHandlers({
-    fetchStats: ({ dispatch }) => () => dispatch(handleFetchStats()),
+    fetchStats: ({ dispatch }) => () => handleFetchStats(dispatch),
 });
 
 const lifecycles = lifecycle({

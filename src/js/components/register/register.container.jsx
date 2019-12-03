@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import { compose } from 'recompose';
 
 import Register from './register.component';
-import { handleRegister } from './handlers';
+import { handleRegister } from './register.handlers';
 
 const mapDispatchToProps = dispatch => {
   return {

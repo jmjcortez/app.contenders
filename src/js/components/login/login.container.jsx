@@ -2,7 +2,7 @@ import { connect } from "react-redux";
 import { compose } from "recompose";
 
 import Login from "./login.component";
-import { handleAuthenticate } from "./handlers";
+import { handleAuthenticate } from "./login.handlers";
 
 const mapStateToProps = (state) => {
     return {

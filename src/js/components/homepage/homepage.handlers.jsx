@@ -5,11 +5,11 @@ import {
 } from '../../actions/stats-actions';
 import { API } from '../../constants/apis';
 
-export const handleFetchStats = async (values, dispatch) => {
+export const handleFetchStats = async (dispatch) => {
     dispatch(fetchStatsAction());
 
     try {
-        const response = await axios.post(`${API}/auth/token/`, values);
+        const response = await axios.get(`${API}/api/stats/overview/`);
         
         dispatch(fetchStatsSuccessAction(response.data));
         

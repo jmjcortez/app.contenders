@@ -1,7 +1,7 @@
 import axios from 'axios';
 import MockAdapter from 'axios-mock-adapter';
 
-import { handleRegister } from '../handlers';
+import { handleRegister } from '../register.handlers';
 import {
   USER_REGISTER,
   USER_REGISTER_SUCCESS,
