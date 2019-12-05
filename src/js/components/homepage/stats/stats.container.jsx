@@ -1,8 +1,8 @@
 import { connect } from 'react-redux';
 import { compose, withHandlers, lifecycle } from 'recompose';
 
-import Homepage from './homepage.component';
-import { handleFetchStats } from './homepage.handlers';
+import Stats from './stats.component';
+import { handleFetchStats } from './stats.handlers';
 
 const mapStateToProps = (state) => {
     return {
@@ -29,4 +29,4 @@ export default compose(
     connect(mapStateToProps),
     handlers,
     lifecycles
-)(Homepage);
+)(Stats);

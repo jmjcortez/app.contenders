@@ -1,11 +1,11 @@
 import axios from 'axios';
 import MockAdapter from 'axios-mock-adapter';
 
-import { handleFetchStats } from '../homepage.handlers';
-import { API } from '../../../constants/apis';
+import { handleFetchStats } from '../stats.handlers';
+import { API } from '../../../../constants/apis';
 import { 
   FETCH_STATS, FETCH_STATS_SUCCESS
-} from '../../../actions/stats-actions';
+} from '../../../../actions/stats-actions';
 
 describe('Stats handler test', () => {
 

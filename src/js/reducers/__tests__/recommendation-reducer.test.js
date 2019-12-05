@@ -35,7 +35,7 @@ describe('Recommendation list reducer', () => {
     };
 
     const action = {
-      type: FETCH_RECOMMENDATION_LIST,
+      type: FETCH_RECOMMENDATION_LIST_SUCCESS,
       payload: payload
     };
 
@@ -43,7 +43,7 @@ describe('Recommendation list reducer', () => {
       recommendationReducer(initialState, action)
     ).toEqual({
       ...initialState,
-      recommendations: ['test', 'test2', 'test3']
+      recommendationList: ['test', 'test2', 'test3']
     });
   });
 });
