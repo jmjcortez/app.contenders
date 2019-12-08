@@ -1,13 +1,17 @@
 import React from 'react';
-import styled from 'styled-components';
 
-import { defaultTheme } from '../../../constants/theme';
+import RecommendedUser from './recommended-user';
 
 export const Recommendation = props => {
-  return (
-    <div>
-      <div>Recommendation</div>
-    </div>
+
+    const { setNextRecommenedUser } = props;
+
+    return (
+        <div>
+            <div>Recommendation</div>
+            <RecommendedUser />
+            <button onClick={setNextRecommenedUser}>Next</button>
+        </div>
   )
 };
 

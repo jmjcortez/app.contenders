@@ -1,7 +1,8 @@
 import axios from 'axios';
 
 import { 
-    fetchRecommendationListAction, fetchRecommendationListFailAction, fetchRecommendationListSuccessAction
+    fetchRecommendationListAction, fetchRecommendationListFailAction, fetchRecommendationListSuccessAction,
+    setNextRecommendedUser
 } from '../../../actions/recommendation-actions';
 import { API } from '../../../constants/apis';
 
@@ -16,4 +17,8 @@ export const handleFetchRecommendationList = async (dispatch) => {
     } catch (error) {
         dispatch(fetchRecommendationListFailAction(error));
     }
+};
+
+export const handleSetNextRecommendedUser = async (dispatch) => {
+    dispatch(setNextRecommendedUser());
 };

@@ -1,6 +1,9 @@
 import { 
   fetchRecommendationListAction, fetchRecommendationListFailAction, fetchRecommendationListSuccessAction,
-  FETCH_RECOMMENDATION_LIST, FETCH_RECOMMENDATION_LIST_SUCCESS, FETCH_RECOMMENDATION_LIST_FAIL 
+  getNextRecommendedUser,
+  FETCH_RECOMMENDATION_LIST, FETCH_RECOMMENDATION_LIST_SUCCESS, FETCH_RECOMMENDATION_LIST_FAIL,
+  SET_NEXT_RECOMMENDED_USER,
+  setNextRecommendedUser
 } from '../recommendation-actions';
 
 describe('Recommendation list actions', () => {
@@ -38,5 +41,13 @@ describe('Recommendation list actions', () => {
       }
 
       expect(fetchRecommendationListFailAction(payload)).toEqual(expectedAction);
+  });
+
+  it('should create set next recommended user action', () => {
+    const expectedAction = {
+        type: SET_NEXT_RECOMMENDED_USER
+    };
+
+    expect(setNextRecommendedUser()).toEqual(expectedAction)
   });
 });

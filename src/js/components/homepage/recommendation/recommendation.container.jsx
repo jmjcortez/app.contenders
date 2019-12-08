@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import { compose, withHandlers, lifecycle } from 'recompose';
 
 import Recommendation from './recommendation.component';
-import { handleFetchRecommendationList } from './recommendation.handlers';
+import { handleFetchRecommendationList, handleSetNextRecommendedUser } from './recommendation.handlers';
 
 const mapStateToProps = (state) => {
     return {
@@ -11,12 +11,13 @@ const mapStateToProps = (state) => {
 };
 
 const handlers = withHandlers({
-    FetchRecommendationList: ({ dispatch }) => () => handleFetchRecommendationList(dispatch),
+    fetchRecommendationList: ({ dispatch }) => () => handleFetchRecommendationList(dispatch),
+    setNextRecommenedUser: ({ dispatch }) => () => handleSetNextRecommendedUser(dispatch),
 });
 
 const lifecycles = lifecycle({
     componentDidMount() {
-        this.props.FetchRecommendationList();
+        this.props.fetchRecommendationList();
     }
 });
 
