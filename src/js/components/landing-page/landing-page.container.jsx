@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { compose, withHandlers, lifecycle, setPropTypes } from 'recompose';
+import { compose } from 'recompose';
 
 import LandingPage from './landing-page.component';
 

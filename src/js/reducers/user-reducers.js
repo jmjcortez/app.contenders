@@ -9,6 +9,7 @@ export const initialState = {
     token: '',
     refresh: '',
     error: {},
+    isAuthenticated: false
 };
 
 const userReducer = (state=initialState, action) => {
@@ -20,7 +21,6 @@ const userReducer = (state=initialState, action) => {
                 error: {},
             };
         }
-        
         case USER_AUTHENTICATE_SUCCESS: {
             window.localStorage.setItem("JWT", action.payload.access);
             window.localStorage.setItem("REFRESH_JWT", action.payload.refresh);
@@ -30,6 +30,7 @@ const userReducer = (state=initialState, action) => {
                 token: action.payload.access,
                 refresh: action.payload.refresh,
                 error: {},
+                isAuthenticated: true
             }
         }
 
@@ -38,6 +39,7 @@ const userReducer = (state=initialState, action) => {
                 ...state,
                 isLoading: false,
                 error: action.payload.error,
+                isAuthenticated: false
             }            
         }
 
@@ -64,7 +66,7 @@ const userReducer = (state=initialState, action) => {
                 error: action.payload.error,
             }            
         }
-        
+
         default:
             return state;
     }

@@ -7,7 +7,6 @@ import Recommendation from './recommendation';
 export const Homepage = props => {
   return (
     <div>
-      <div>Hello world</div>
       <Stats />
       <Recommendation />
     </div>
