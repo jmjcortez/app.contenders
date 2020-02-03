@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Redirect } from 'react-router-dom';
-import { Form, Button, Col } from 'react-bootstrap';
+import { Form, Button, Col, Toast } from 'react-bootstrap';
 import { reduxForm, Field } from 'redux-form';
 
 import { FieldInput } from '../form-fields';
@@ -63,10 +62,14 @@ const StyledButton = styled(Button)`
 `;
 
 export const Register = props => {
-  const { handleSubmit } = props;
-
+  const { handleSubmit, isLoading, error } = props;
+  
   return (
     <Container>
+      {error ? <Toast>
+        <Toast.Header>Error</Toast.Header>
+        <Toast.Body>Invalid input!</Toast.Body>
+      </Toast> : null} 
       <FormWrapper>
         <StyledTitle>REGISTER</StyledTitle>
         <Underline />
@@ -121,7 +124,7 @@ export const Register = props => {
               <Form.Text className="text-muted">
                   Required
               </Form.Text>
-          <StyledButton variant="primary" type="submit" block>
+          <StyledButton variant="primary" type="submit" block disabled={isLoading}>
               Submit
           </StyledButton>
         </Form>

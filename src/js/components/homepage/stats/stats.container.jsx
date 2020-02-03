@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
-import { compose, withHandlers, lifecycle } from 'recompose';
+import { compose, withHandlers, lifecycle, setPropTypes } from 'recompose';
+import PropTypes from 'prop-types';
 
 import Stats from './stats.component';
 import { handleFetchStats } from './stats.handlers';
@@ -25,8 +26,19 @@ const lifecycles = lifecycle({
     }
 });
 
+const propTypes ={
+    contendersNearbyCount: PropTypes.number,
+    contendersFightingInCity: PropTypes.number,
+    contendersFightingInCountry: PropTypes.number,
+    contendersGlobalCount: PropTypes.number,
+    contendersPerDiscipline: PropTypes.object,
+    contendersPerCombatType: PropTypes.object,
+    fetchStats: PropTypes.func,
+ }
+
 export default compose(
     connect(mapStateToProps),
+    setPropTypes(propTypes),
     handlers,
     lifecycles
 )(Stats);

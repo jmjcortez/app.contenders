@@ -2,15 +2,13 @@ import React from 'react';
 import { CardDeck, Card } from 'react-bootstrap';
 import styled from 'styled-components';
 
-import RecommendedUser from './recommended-user';
-
 const RecommendedContainer = styled.div`
     margin: 30px;    
 `;
 
 export const Recommendation = props => {
 
-    const { setNextRecommenedUser, recommendationList } = props;
+    const { recommendationList } = props;
 
     const recommendedUsers = recommendationList.map((recommendedUser) =>
         <Card>

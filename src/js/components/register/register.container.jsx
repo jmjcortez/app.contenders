@@ -10,6 +10,13 @@ const mapDispatchToProps = dispatch => {
   }
 }
 
+const mapStateToProps = (state) => {
+  return {
+    isLoading: state.user.isLoading,
+    error: state.user.error,
+  }
+}
+
 export default compose(
-  connect(null, mapDispatchToProps),
+  connect(mapStateToProps, mapDispatchToProps),
 )(Register);

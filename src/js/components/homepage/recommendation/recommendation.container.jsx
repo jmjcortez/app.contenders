@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
-import { compose, withHandlers, lifecycle } from 'recompose';
+import { compose, withHandlers, lifecycle, setPropTypes } from 'recompose';
+import PropTypes from "prop-types";
 
 import Recommendation from './recommendation.component';
 import { handleFetchRecommendationList, handleSetNextRecommendedUser } from './recommendation.handlers';
@@ -21,8 +22,15 @@ const lifecycles = lifecycle({
     }
 });
 
+const propTypes = {
+    fetchRecommendationList: PropTypes.func,
+    setNextRecommenedUser: PropTypes.func,
+    recommendationList: PropTypes.array,
+};
+
 export default compose(
     connect(mapStateToProps),
+    setPropTypes(propTypes),
     handlers,
     lifecycles
 )(Recommendation);

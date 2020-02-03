@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
 
 import Stats from './stats';
 import Recommendation from './recommendation';
